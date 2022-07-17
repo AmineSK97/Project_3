@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+article {
+  margin: 14px 0%;
+  animation-duration: 1.5s;
+  animation-name: article-appear;
+  box-shadow: 3px 3px 5px rgb(208, 200, 200);
+  border-radius: 20px;
+  animation-fill-mode: both;
+}
+
+.delay-1 {
+  animation-delay: 0s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.4s;
+}
+
+.delay-4 {
+  animation-delay: 0.6s;
+}
+
+.delay-5 {
+  animation-delay: 0.8s;
+}
+
+.delay-6 {
+  animation-delay: 1s;
+}
+
+.delay-7 {
+  animation-delay: 1.2s;
+}
+
+.delay-8 {
+  animation-delay: 1.4s;
+}
+
+.delay-9 {
+  animation-delay: 1.6s;
+}
+
+@keyframes article-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, -30px);
+  }
+}
+h1 {
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+h1 .icone {
+  display: inline-block;
+  font-size: 25px;
+  padding-right: 7px;
+}
+h1 .icone:hover {
+  font-weight: 900;
+  transition: 0.7s;
+  color: #9356DC;
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 16px;
+  position: relative;
+  height: 30px;
+  margin: 30px 0px;
+  margin-bottom: 60px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0%;
+  z-index: 1;
+}
+body img {
+  width: 100%;
+  object-fit: cover;
+}
+
+header {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+}
+header nav {
+  display: inline-block;
+  text-align: center;
+  padding-top: 6px;
+  position: absolute;
+  left: 20px;
+}
+header img {
+  width: 170px;
+}
+header i {
+  font-size: 20px;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  margin-top: -40px;
+  background-color: #F6F6F6;
+  padding: 5px 15px;
+  border-radius: 30px 30px 0% 0%;
+}
+main h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+}
+
+.h3-box {
+  border-bottom: solid #99E2D0 2px;
+  width: 40px;
+}
+
+.food-card {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 20px;
+  height: 70px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.food-card:hover .food-card__check {
+  margin-right: 0%;
+}
+.food-card:hover .food-card__check i {
+  transform: rotate(1turn);
+}
+.food-card h3 {
+  margin: 0%;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.food-card h4 {
+  margin: 0%;
+  font-weight: 200;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.food-card strong {
+  padding-top: 40px;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.food-card__info {
+  margin: 15px;
+  overflow: hidden;
+  width: auto;
+  margin-right: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.food-card__check {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  border-radius: 0px 20px 20px 0px;
+  margin-right: -70px;
+  transition-duration: 0.5s;
+}
+.food-card__check i {
+  font-size: 25px;
+  color: white;
+  background: #99E2D0;
+  transition-duration: 0.5s;
+}
+
+button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0cm;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  padding: 0% 50px;
+  align-self: center;
+  margin: 30px 0px;
+  box-shadow: 3px 3px 3px rgb(183, 177, 177);
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px;
+}
+footer a {
+  color: white;
+}
+footer h2 {
+  font-size: 17px;
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0%;
+  font-size: 15px;
+}
+
+li {
+  color: white;
+  margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=style_menu.css.map */
