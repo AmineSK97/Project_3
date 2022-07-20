@@ -235,13 +235,13 @@ ol i {
   border: none;
 }
 .restaurant__card__txt .icone {
-  display: inline-block;
   font-size: 25px;
   padding-right: 7px;
 }
 .restaurant__card__txt .icone:hover {
   font-weight: 900;
-  transition: 0.7s;
+  animation-duration: 0.5s;
+  animation-name: heart-empty;
   cursor: pointer;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -249,6 +249,14 @@ ol i {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+@keyframes heart-empty {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 h3 {

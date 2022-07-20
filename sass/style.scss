@@ -263,14 +263,14 @@ ol{
     }
 
     .icone{
-        display: inline-block;
         font-size: 25px;
         padding-right: 7px;
     }
 
     .icone:hover{
         font-weight: 900;
-        transition: 0.7s;
+        animation-duration: 0.5s;
+        animation-name: heart-empty;
         cursor: pointer;
         background-image:linear-gradient($pink,$purple);
         background-clip:text;
@@ -278,6 +278,16 @@ ol{
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
+    }
+
+    @keyframes heart-empty {
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
     }
 }
 

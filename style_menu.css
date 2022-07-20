@@ -69,15 +69,28 @@ h1 {
   padding-right: 20px;
 }
 h1 .icone {
-  display: inline-block;
   font-size: 25px;
   padding-right: 7px;
 }
 h1 .icone:hover {
   font-weight: 900;
-  transition: 0.7s;
-  color: #9356DC;
+  animation-duration: 0.5s;
+  animation-name: heart-empty;
   cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+@keyframes heart-empty {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 h2 {
