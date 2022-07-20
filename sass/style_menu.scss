@@ -57,6 +57,10 @@ article {
     animation-delay: 1.60s;
 }
 
+.delay-10{
+    animation-delay: 1.80s;
+}
+
 @keyframes article-appear {
     0% {
         opacity: 0;    
@@ -150,7 +154,13 @@ header {
     }
 }
 
+.img__menu{
+    height: 270px;
+}
+
 main {
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 2;
     margin-top: -40px;
@@ -271,6 +281,14 @@ button {
     align-self: center;
     margin: 30px 0px;
     box-shadow: 3px 3px 3px rgb(183, 177, 177);
+    
+}
+
+button:hover{
+    box-shadow: 5px 5px 5px rgb(130, 127, 127);
+    position: relative;
+    right: 2px;
+    bottom: 2px;
 }
 
 footer {
@@ -298,4 +316,32 @@ ul {
 li {
     color: white;
     margin-bottom: 5px;
+}
+
+@media screen and (min-width:992px){
+
+    .img__menu{
+        height: 400px;
+    }
+
+    .menu__set{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .menu__category{
+        width: 30%;
+        
+    }
+
+    h2{
+        margin-left: 43%;
+    }
+
+    article{
+        margin:30px 0px ;
+    }
+
 }
