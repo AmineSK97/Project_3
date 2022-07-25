@@ -37,7 +37,6 @@ a {
   }
 }
 .loading {
-  display: flex;
   position: fixed;
   left: 45%;
   right: 45%;
@@ -51,8 +50,7 @@ a {
   border-top-color: #9356DC;
   border-bottom-color: #FF79DA;
   border-radius: 50%;
-  transform: rotate(2turn);
-  animation: loading 1s ease infinite;
+  animation-name: loading;
   animation-duration: 3s;
   animation-iteration-count: 1;
   opacity: 1;
