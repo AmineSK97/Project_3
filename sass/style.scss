@@ -21,18 +21,19 @@ $btn-hover: #F5EDFF;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0%;
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.loading__screen{
+.loading__screen {
     display: flex;
+    justify-content: center;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -42,26 +43,25 @@ a{
     animation-delay: 2.5s;
     animation-duration: 0s;
     animation-iteration-count: 1;
-    animation-name: load-disappearance ;
+    animation-name: load-disappearance;
     animation-fill-mode: both;
 }
 
 @keyframes load-disappearance {
 
     0% {
-      opacity: 0.8;
+        opacity: 0.8;
     }
-    
+
     100% {
-      z-index: -1;
+        z-index: -1;
+        opacity: 0;
     }
 }
 
 .loading {
     position: fixed;
-    left: 45%;
-    right: 45%;
-    top:43%;
+    top: 43%;
     z-index: 11;
     min-width: 65px;
     min-height: 65px;
@@ -72,24 +72,25 @@ a{
     border-bottom-color: $pink;
     border-radius: 50%;
     animation-name: loading;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-iteration-count: 1;
     opacity: 1;
-    
+    animation-fill-mode: both;
+
 }
 
 @keyframes loading {
 
     0% {
-      transform: rotate(0turn);
+        transform: rotate(0turn);
     }
-    
+
     100% {
-      transform: rotate(6turn);
+        transform: rotate(6turn);
     }
 }
 
-header{
+header {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -99,13 +100,13 @@ header{
     width: 100%;
 }
 
-#ohmyfood{
+#ohmyfood {
     width: 170px;
     height: auto;
     text-align: center;
 }
 
-#search{
+#search {
     position: relative;
     z-index: 1;
     background-color: #F6F6F6;
@@ -113,7 +114,7 @@ header{
     align-items: center;
     flex-direction: column;
 
-    p{
+    p {
         font-weight: lighter;
         width: 80%;
         text-align: center;
@@ -122,19 +123,19 @@ header{
     }
 }
 
-#location{
+#location {
     background-color: #EAEAEA;
     height: 50px;
     width: 100%;
     text-align: center;
     padding-top: 15px;
 
-    i{
+    i {
         margin-right: 10px;
     }
 }
 
-h1{
+h1 {
     width: 70%;
     text-align: center;
     margin-right: 0%;
@@ -142,36 +143,45 @@ h1{
     margin-bottom: 0%;
 }
 
-.search__btn{
+.search__btn {
     height: 50px;
     border-radius: 25px;
     border: 0px;
-    background: linear-gradient($pink,$purple);
+    background: linear-gradient($pink, $purple);
     color: white;
     margin-bottom: 50px;
     box-shadow: 2px 2px 7px gray;
     padding: 0px 15px;
     font-size: 16px;
-    font-weight:lighter;
+    font-weight: lighter;
+}
+
+.search__btn:hover {
+    box-shadow: 5px 5px 5px rgb(130, 127, 127);
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+    filter: brightness(1.14);
 }
 
 
 
-#functioning{
+
+#functioning {
     display: flex;
     flex-direction: column;
     padding: 45px 20px;
 
-    h2{
+    h2 {
         margin-top: 0%;
     }
 }
 
-ol{
+ol {
     list-style: none;
     padding: 0%;
 
-    li{
+    li {
         height: 70px;
         width: 100%;
         margin: 23px 0%;
@@ -183,7 +193,7 @@ ol{
         display: flex;
         flex-direction: row;
 
-        div{
+        div {
             background-color: $purple;
             height: 20px;
             width: 20px;
@@ -196,7 +206,7 @@ ol{
         }
     }
 
-    i{
+    i {
         color: #7E7E7E;
         font-size: 18px;
         margin-right: 25px;
@@ -205,18 +215,18 @@ ol{
 }
 
 
-#restaurant
-{
+#restaurant {
     background-color: #F6F6F6;
     padding: 45px 20px;
     display: flex;
     flex-direction: column
 }
 
-.restaurant__card{
+.restaurant__card {
     @include restaurant__card();
-}    
-.restaurant__card__new{
+}
+
+.restaurant__card__new {
     position: absolute;
     background-color: $green;
     width: 80px;
@@ -230,11 +240,12 @@ ol{
     top: 12px;
 }
 
-.restaurant__card__img{
+.restaurant__card__img {
     height: 70%;
     width: 100%;
     position: relative;
-    img{
+
+    img {
         border-radius: 15px 15px 0% 0%;
         object-fit: cover;
         width: 100%;
@@ -242,35 +253,36 @@ ol{
     }
 }
 
-.restaurant__card__txt{
+.restaurant__card__txt {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0% 15px;
-    p{
+
+    p {
         margin-top: 4px;
         font-weight: 100;
     }
 
-    button{
+    button {
         background: white;
         border: none;
     }
 
-    .icone{
+    .icone {
         font-size: 25px;
         padding-right: 7px;
     }
 
-    .icone:hover{
+    .icone:hover {
         font-weight: 900;
         animation-duration: 0.5s;
         animation-name: heart-empty;
         cursor: pointer;
-        background-image:linear-gradient($pink,$purple);
-        background-clip:text;
+        background-image: linear-gradient($pink, $purple);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
@@ -278,17 +290,17 @@ ol{
     }
 
     @keyframes heart-empty {
-        0%{
+        0% {
             opacity: 0;
         }
 
-        100%{
+        100% {
             opacity: 1;
         }
     }
 }
 
-h3{
+h3 {
     font-weight: bolder;
     font-size: 17px;
     margin-top: 15px;
@@ -298,63 +310,66 @@ h3{
 footer {
     background-color: #353535;
     padding: 15px;
-    a{
+
+    a {
         color: white;
     }
 
-    h2{
+    h2 {
         font-size: 17px;
         margin-top: 0%;
         color: white;
         font-family: 'Shrikhand', cursive;
     }
 
-    li{
+    li {
         color: white;
         margin-bottom: 5px;
     }
-  }
+}
 
-ul{
+ul {
     list-style-type: none;
     padding: 0%;
     font-size: 15px;
 }
 
 
-@media screen and (max-width:992px) and (min-width:767px){
+@media screen and (max-width:992px) and (min-width:767px) {
 
-    #functioning{
+    #functioning {
         text-align: center;
     }
 
-    ol{
+    ol {
         margin-left: 25%;
         width: 50%;
-        li{
+
+        li {
             text-align: center;
         }
     }
 
-    #restaurant{
+    #restaurant {
         text-align: center;
     }
 
-    #set__card__restaurant{
+    #set__card__restaurant {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .restaurant__card{
+    .restaurant__card {
         width: 335px;
         margin: 30px;
     }
 
-    footer{
+    footer {
         text-align: center;
-        ul{
+
+        ul {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -366,45 +381,47 @@ ul{
 }
 
 
-@media screen and (min-width:992px){
+@media screen and (min-width:992px) {
 
-    #functioning{
+    #functioning {
         text-align: center;
     }
 
-    ol{
+    ol {
         flex-direction: row;
         display: flex;
         justify-content: space-around;
-        li{
+
+        li {
             width: 30%;
 
-            div{
+            div {
                 bottom: 33.5px;
                 left: 43%;
             }
         }
     }
 
-    #restaurant{
+    #restaurant {
         text-align: center;
     }
 
-    #set__card__restaurant{
+    #set__card__restaurant {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .restaurant__card{
+    .restaurant__card {
         width: 19%;
         margin: 30px;
     }
 
-    footer{
+    footer {
         text-align: center;
-        ul{
+
+        ul {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
