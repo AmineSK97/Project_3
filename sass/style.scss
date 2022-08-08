@@ -366,6 +366,14 @@ ul {
         margin: 30px;
     }
 
+    .restaurant__card__txt{
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
     footer {
         text-align: center;
 
@@ -416,6 +424,14 @@ ul {
     .restaurant__card {
         width: 19%;
         margin: 30px;
+    }
+
+    .restaurant__card__txt{
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     footer {
