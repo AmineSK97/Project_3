@@ -73,7 +73,7 @@ article {
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 26px;
     font-family: 'Shrikhand', cursive;
     display: flex;
     justify-content: space-between;
@@ -316,6 +316,10 @@ ul {
 li {
     color: white;
     margin-bottom: 5px;
+
+    .icone{
+        font-size: 11px;
+    }
 }
 
 @media screen and (min-width:992px){

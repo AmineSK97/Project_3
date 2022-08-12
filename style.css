@@ -93,7 +93,7 @@ header {
   width: 80%;
   text-align: center;
   margin-bottom: 30px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 #location {
@@ -172,6 +172,12 @@ ol li div {
   position: relative;
   right: 39px;
 }
+ol li:hover {
+  background-color: #F5EDFF;
+}
+ol li:hover i {
+  color: #9356DC;
+}
 ol i {
   color: #7E7E7E;
   font-size: 18px;
@@ -231,6 +237,7 @@ ol i {
   align-items: center;
   width: 100%;
   padding: 0% 15px;
+  position: relative;
 }
 .restaurant__card__txt p {
   margin-top: 4px;
@@ -239,10 +246,12 @@ ol i {
 .restaurant__card__txt button {
   background: white;
   border: none;
+  overflow: hidden;
 }
 .restaurant__card__txt .icone {
   font-size: 25px;
   padding-right: 7px;
+  min-height: 25px;
 }
 .restaurant__card__txt .icone:hover {
   font-weight: 900;
@@ -288,6 +297,9 @@ footer h2 {
 footer li {
   color: white;
   margin-bottom: 5px;
+}
+footer li .icone {
+  font-size: 11px;
 }
 
 ul {
