@@ -252,11 +252,10 @@ ol i {
   font-size: 25px;
   padding-right: 7px;
   min-height: 25px;
-}
-.restaurant__card__txt .icone:hover {
+  position: relative;
+  transform: scale(0.001);
   font-weight: 900;
   animation-duration: 0.5s;
-  animation-name: heart-empty;
   cursor: pointer;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -265,12 +264,23 @@ ol i {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+.restaurant__card__txt .icone-2 {
+  font-size: 25px;
+  padding-right: 7px;
+  min-height: 25px;
+  position: absolute;
+  right: 8%;
+}
+.restaurant__card__txt .icone-2:hover {
+  z-index: -1232;
+}
+.restaurant__card__txt .icone-2:hover .icone {
+  animation-name: heart-empty;
+  animation-duration: 0.3s;
+}
 @keyframes heart-empty {
-  0% {
-    opacity: 0;
-  }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
 
